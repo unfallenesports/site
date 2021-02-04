@@ -1,0 +1,12 @@
+aside {
+  position: fixed;
+  top: var(--header-height);
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(#177eea, #cc1c34);
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
