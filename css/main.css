@@ -1,3 +1,5 @@
+@import 'header.css';
+@import 'aside.css';
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 body {
@@ -9,4 +11,18 @@ body {
 
 #page {
   margin-top: var(--header-height);
+}
+
+.submenu {
+  visibility: visible;
+  position: absolute;
+  cursor: default;
+  opacity: 1;
+  transition: visibility 0s, opacity 111ms;
+}
+
+.submenu.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 111ms, opacity 111ms;
 }

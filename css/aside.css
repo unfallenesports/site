@@ -1,12 +1,54 @@
+:root {
+  --button-padding: 5px;
+}
+
 aside {
   position: fixed;
   top: var(--header-height);
   bottom: 0;
   right: 0;
-  padding: 30px;
+  padding-top: 50px;
   text-align: center;
   background: linear-gradient(#177eea, #cc1c34);
-  opacity: 0;
-  transition: opacity 250ms;
+  transition: transform 250ms;
+  transform: translateX(calc(100% + 1px));
 }
 
+aside p {
+  padding-top: var(--button-padding);
+  padding-bottom: var(--button-padding);
+  margin-right: 100px;
+  width: 100%;
+  transition: background 250ms;
+}
+
+aside p:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+aside .submenu {
+  background-color: #333;
+  transform: translateY(var(--button-padding));
+  height: 100%;
+  width: 100%;
+}
+
+aside .submenu div {
+  margin-top: 25px;
+}
+
+aside .submenu a {
+  line-height: 55px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: color 250ms;
+}
+
+aside .submenu a:hover {
+  color: dodgerblue;
+}
+
+aside .submenu a:active {
+  color: deepskyblue;
+}

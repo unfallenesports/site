@@ -28,11 +28,30 @@ header * {
   margin-top: calc(var(--header-padding) * 2);
 }
 
+nav {
+  right: calc(var(--header-padding) * 5);
+}
+
+nav span {
+  transition: color 250ms;
+}
+
+nav span:hover {
+  color: gray;
+}
+
+nav .submenu {
+  background-color: greenyellow;
+}
+
+#menu {
+  right: calc(var(--header-padding));
+}
+
 nav, #menu {
   position: absolute;
-  margin: 0px;
+  margin: 0;
   top: 50%;
-  right: calc(var(--header-padding) * 2);
   transform: translate(0%, -50%);
 }
 
@@ -41,7 +60,7 @@ nav, #menu {
   height: 32px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px), (hover: none) {
   :root {
     --header-height: 50px;
     --icon-height: 32px
