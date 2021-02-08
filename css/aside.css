@@ -26,6 +26,10 @@ aside p:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+aside p:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 aside .submenu {
   background-color: #333;
   transform: translateY(var(--button-padding));
