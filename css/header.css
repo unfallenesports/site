@@ -9,7 +9,8 @@ header {
   width: 100%;
   top: 0;
   height: var(--header-height);
-  background-color: #111;
+  box-shadow: 0 0 5px 1px black;
+  background-color: #222;
 }
 
 header img {
@@ -29,7 +30,7 @@ header * {
 }
 
 nav {
-  right: calc(var(--header-padding) * 5);
+  right: calc(var(--header-padding) * 4);
 }
 
 nav span {
@@ -40,12 +41,38 @@ nav span:hover {
   color: gray;
 }
 
-nav .submenu {
-  background-color: greenyellow;
+nav span:active {
+  color: darkgray;
 }
 
-#menu {
-  right: calc(var(--header-padding));
+nav .submenu {
+  margin: 0;
+  margin-top: calc(var(--header-padding) / 4);
+  background: linear-gradient(#177eea, #cc1c34);
+  padding: 15px 20px 13px 20px;
+  border-radius: 1em;
+  box-shadow: 0 0 5px black;
+}
+
+nav .submenu div {
+  margin: 0;
+}
+
+nav .submenu a {
+  margin: 0;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  transition: color 250ms, text-shadow 250ms;
+}
+
+nav .submenu a:hover {
+  color: azure;
+  text-shadow: 0 0 5px black;
+}
+
+nav .submenu a:active {
+  text-shadow: 0 0 10px black;
 }
 
 nav, #menu {
@@ -55,12 +82,36 @@ nav, #menu {
   transform: translate(0%, -50%);
 }
 
+#header-base {
+  position: absolute;
+  top: 0;
+  background-color: #222;
+  width: 100%;
+}
+
 #menu {
   display: none;
   height: 32px;
+  right: var(--header-padding);
+  transition: filter 250ms;
 }
 
-@media (max-width: 700px), (hover: none) {
+#menu:hover {
+  filter: brightness(0.5);
+}
+
+#menu:active {
+  filter: brightness(calc(1 / 1.5));
+}
+
+@supports (backdrop-filter: blur(10px)) {
+  header {
+    background-color: rgb(35, 35, 35, 0.75);
+    backdrop-filter: blur(10px);
+  }
+}
+
+@media (max-width: 600px), (hover: none) {
   :root {
     --header-height: 50px;
     --icon-height: 32px

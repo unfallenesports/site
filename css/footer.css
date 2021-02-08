@@ -1,0 +1,11 @@
+:root {
+  --footer-padding: 20px;
+}
+
+footer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #222;
+  padding: var(--footer-padding);
+  box-shadow: 0 0 5px 1px black;
+}
