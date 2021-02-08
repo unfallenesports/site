@@ -8,7 +8,8 @@ var tree =
   {
     'Who we are': ['link', '_self'],
     'Matches': ['link', '_self'],
-    'Kebab store': ['link', '_self']
+    'Kebab store': ['link', '_self'],
+    'Ciao': ['link', '_self']
   },
   
   'SOCIALS':

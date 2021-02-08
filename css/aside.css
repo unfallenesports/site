@@ -10,6 +10,7 @@ aside {
   padding-top: 50px;
   text-align: center;
   background: linear-gradient(#177eea, #cc1c34);
+  box-shadow: 0 5px 5px black;
   transition: transform 250ms;
   transform: translateX(calc(100% + 1px));
 }
