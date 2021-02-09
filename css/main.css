@@ -48,3 +48,9 @@ section:last-child {
   opacity: 0;
   transition: visibility 222ms, opacity 222ms;
 }
+
+a.invisible {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+}

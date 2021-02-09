@@ -6,17 +6,19 @@ var tree =
 {
   'HOME':
   {
-    'Who we are': ['link', '_self'],
+    'Who are we': ['https://it.wikipedia.org/wiki/Unfallenesports', '_self'],
     'Matches': ['link', '_self'],
-    'Kebab store': ['link', '_self'],
+    'Store': ['store.html', '_self'],
     'Ciao': ['link', '_self']
   },
   
   'SOCIALS':
   {
-    'Facebook': ['link', '_blank'],
-    'Instagram': ['link', '_blank'],
-    'TikTok': ['link', '_blank']
+    'Instagram': ['https://www.instagram.com/unfallen_esports/?hl=af', '_blank'],
+    'Twitter': ['https://twitter.com/unfallenesports', '_blank'],
+    'Youtube': ['https://www.youtube.com/channel/UCYtlayJBmU24KRAhaZR-2Yw', '_blank'],
+    'Faceit': ['https://www.faceit.com/pl/organizers/dc54c518-e8ef-40e9-8e75-caf3f05fcd0f/Unfallen%20esport/followers', '_blank'],
+    'Discord':['https://discord.gg/gedVTHfnHV', '_blank']
   }
 }
 
