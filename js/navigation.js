@@ -6,7 +6,8 @@ var tree =
 {
   'HOME':
   {
-    'Who are we': ['https://it.wikipedia.org/wiki/Unfallenesports', '_self'],
+    'Homepage': ['index.html', '_self'],
+    'Who are we': ['link', '_self'],
     'Matches': ['link', '_self'],
     'Store': ['store.html', '_self'],
     'Ciao': ['link', '_self']
