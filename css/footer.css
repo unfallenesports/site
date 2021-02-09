@@ -9,3 +9,27 @@ footer {
   padding: var(--footer-padding);
   box-shadow: 0 0 5px 1px black;
 }
+
+.copiright-text{
+  text-align: center;
+}
+
+.logos-container {
+  text-align: center;
+}
+
+.logos-container img {
+  width: 40px;
+  height: 40px;
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: filter 250ms;
+}
+
+.logos-container img:hover {
+  filter: brightness(0.5);
+}
+
+.logos-container img:active {
+  filter: brightness(calc(2 / 3));
+}
