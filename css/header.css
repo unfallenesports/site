@@ -1,0 +1,133 @@
+:root {
+  --header-height: 125px;
+  --header-padding: 20px;
+  --icon-height: 64px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: var(--header-height);
+  box-shadow: 0 0 5px 1px black;
+  background-color: #222;
+}
+
+header img {
+  height: var(--icon-height);
+  float: left;
+  margin-top: calc(var(--header-height) / 2 - var(--icon-height) / 2);
+  margin-right: var(--header-padding);
+}
+
+header h1 {
+  line-height: 40px;
+}
+
+header * {
+  margin-left: var(--header-padding);
+  margin-top: calc(var(--header-padding) * 2);
+}
+
+nav {
+  right: calc(var(--header-padding) * 4);
+}
+
+nav span {
+  transition: color 250ms;
+}
+
+nav span:hover {
+  color: gray;
+}
+
+nav span:active {
+  color: darkgray;
+}
+
+nav .submenu {
+  margin: 0;
+  margin-top: calc(var(--header-padding) / 4);
+  background: linear-gradient(#177eea, #cc1c34);
+  padding: 15px 20px 13px 20px;
+  border-radius: 1em;
+  box-shadow: 0 0 5px black;
+}
+
+nav .submenu div {
+  margin: 0;
+}
+
+nav .submenu a {
+  margin: 0;
+  line-height: 30px;
+  color: white;
+  text-decoration: none;
+  transition: color 250ms, text-shadow 250ms;
+}
+
+nav .submenu a:hover {
+  color: azure;
+  text-shadow: 0 0 5px black;
+}
+
+nav .submenu a:active {
+  text-shadow: 0 0 10px black;
+}
+
+nav, #menu {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+#header-base {
+  position: absolute;
+  top: 0;
+  background-color: #222;
+  width: 100%;
+}
+
+#menu {
+  display: none;
+  height: 32px;
+  right: var(--header-padding);
+  transition: filter 250ms;
+}
+
+#menu:hover {
+  filter: brightness(0.5);
+}
+
+#menu:active {
+  filter: brightness(calc(1 / 1.5));
+}
+
+@supports (backdrop-filter: blur(25px)) {
+  header {
+    background-color: rgb(35, 35, 35, 0.75);
+    backdrop-filter: blur(25px);
+  }
+}
+
+@media (max-width: 600px), (hover: none) {
+  :root {
+    --header-height: 50px;
+    --icon-height: 32px
+  }
+  
+  header h1 {
+    line-height: 52px;
+    font-size: 20px;
+    margin-top: 0;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  #menu {
+    display: inline;
+  }
+}
