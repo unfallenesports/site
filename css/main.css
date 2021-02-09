@@ -1,6 +1,9 @@
 @import 'header.css';
 @import 'aside.css';
 @import 'footer.css';
+@import 'info.css';
+@import 'webkit-scrollbars.css';
+@import 'moz-scrollbars.css';
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 :root {
