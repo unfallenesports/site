@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.title{
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 40px;
+}
+
+.section1{
+    font-size: 20px;
+    float: right;
+}
+
+.sect-logo{
+}

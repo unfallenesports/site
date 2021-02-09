@@ -1,0 +1,57 @@
+@import 'header.css';
+@import 'aside.css';
+@import 'footer.css';
+@import 'info.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+  --page-padding: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway';
+  color: white;
+  background-color: #222;
+}
+
+section {
+  padding: var(--page-padding);
+  margin-bottom: 100px;
+  background-color: black;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+section:last-child {
+  margin: 0;
+}
+
+#page {
+  margin-top: var(--header-height);
+}
+
+#page.loaded {
+  background-image: url('../imgs/animation.gif');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.submenu {
+  visibility: visible;
+  position: absolute;
+  cursor: default;
+  opacity: 1;
+  transition: visibility 0s, opacity 222ms;
+}
+
+.submenu.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 222ms, opacity 222ms;
+}
+
+a.invisible {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+}
