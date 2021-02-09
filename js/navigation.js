@@ -21,7 +21,8 @@ var tree =
     'Twitch' : ['https://www.twitch.tv/unfallen_esports'],
     'Reddit' : ['https://www.reddit.com/user/unfallen_esports'],
     'Faceit': ['https://www.faceit.com/pl/organizers/dc54c518-e8ef-40e9-8e75-caf3f05fcd0f/Unfallen%20esport/followers', '_blank'],
-    'Discord':['https://discord.gg/gedVTHfnHV', '_blank']
+    'Discord':['https://discord.gg/gedVTHfnHV', '_blank'],
+    'Reddit':['https://www.reddit.com/user/unfallen_esports','_blank']
   }
 }
 
