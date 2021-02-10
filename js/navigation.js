@@ -7,7 +7,7 @@ var tree =
   'HOME':
   {
     'Homepage': ['index.html', '_self'],
-    'Who are we': ['link', '_self'],
+    'Who are we': ['#who-are-we', '_self'],
     'Matches': ['link', '_self'],
     'Store': ['store.html', '_self'],
     'Ciao': ['link', '_self']
