@@ -21,7 +21,9 @@ header img {
 }
 
 header h1 {
+  margin-left: 0;
   line-height: 40px;
+  display: inline-block;
 }
 
 header * {

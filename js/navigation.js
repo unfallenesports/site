@@ -6,7 +6,8 @@ var tree =
 {
   'HOME':
   {
-    'Who are we': ['https://it.wikipedia.org/wiki/Unfallenesports', '_self'],
+    'Homepage': ['index.html', '_self'],
+    'Who are we': ['#who-are-we', '_self'],
     'Matches': ['link', '_self'],
     'Store': ['store.html', '_self'],
     'Ciao': ['link', '_self']
@@ -17,8 +18,11 @@ var tree =
     'Instagram': ['https://www.instagram.com/unfallen_esports/?hl=af', '_blank'],
     'Twitter': ['https://twitter.com/unfallenesports', '_blank'],
     'Youtube': ['https://www.youtube.com/channel/UCYtlayJBmU24KRAhaZR-2Yw', '_blank'],
+    'Twitch' : ['https://www.twitch.tv/unfallen_esports'],
+    'Reddit' : ['https://www.reddit.com/user/unfallen_esports'],
     'Faceit': ['https://www.faceit.com/pl/organizers/dc54c518-e8ef-40e9-8e75-caf3f05fcd0f/Unfallen%20esport/followers', '_blank'],
-    'Discord':['https://discord.gg/gedVTHfnHV', '_blank']
+    'Discord':['https://discord.gg/gedVTHfnHV', '_blank'],
+    'Reddit':['https://www.reddit.com/user/unfallen_esports','_blank']
   }
 }
 
