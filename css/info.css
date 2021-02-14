@@ -14,7 +14,7 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 600px), (hover: none) {
+@media (max-width: 768px) {
   #who-we-are .title {
     margin-left: 0px;
   }

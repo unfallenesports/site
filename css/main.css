@@ -3,9 +3,11 @@
 @import 'footer.css';
 @import 'info.css';
 @import 'head-banner.css';
+@import 'slides.css';
+@import 'coming-soon.css';
 @import 'webkit-scrollbars.css';
 @import 'moz-scrollbars.css';
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
 
 @font-face {
   font-family: 'Quantum';
@@ -23,6 +25,16 @@ body {
   background-color: #222;
 }
 
+main {
+  margin-top: var(--header-height);
+}
+
+main.loaded {
+  background-image: url('../imgs/animation.gif');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 section {
   padding: var(--page-padding);
   margin-bottom: 100px;
@@ -36,16 +48,6 @@ section:last-of-type {
 
 section:last-child {
   margin: 0;
-}
-
-#page {
-  margin-top: var(--header-height);
-}
-
-#page.loaded {
-  background-image: url('../imgs/animation.gif');
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .submenu {
@@ -87,4 +89,13 @@ h1.title{
   margin: 0;
   margin-bottom: 20px;
   margin-left: 20px;
+}
+
+#divider {
+  text-shadow: 0 0 10px gray;
+  padding: 0;
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, .4);
+  box-shadow: 0 0 1px gray;
+  margin: 0;
 }

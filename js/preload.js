@@ -6,6 +6,6 @@ var res;
 res = new Image();
 res.onload = function()
 {
-  document.getElementById('page').classList.add('loaded');
+  document.getElementsByTagName('main')[0].classList.add('loaded');
 };
 res.src = '../imgs/animation.gif';

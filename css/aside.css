@@ -13,6 +13,7 @@ aside {
   box-shadow: 0 5px 5px black;
   transition: transform 250ms;
   transform: translateX(calc(100% + 1px));
+  z-index: 1000;
 }
 
 aside p {

@@ -11,6 +11,7 @@ header {
   height: var(--header-height);
   box-shadow: 0 0 5px 1px black;
   background-color: #222;
+  z-index: 1000;
 }
 
 header img {
@@ -113,7 +114,7 @@ nav, #menu {
   }
 }
 
-@media (max-width: 600px), (hover: none) {
+@media (max-width: 768px) {
   :root {
     --header-height: 50px;
     --icon-height: 32px

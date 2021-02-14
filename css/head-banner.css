@@ -15,7 +15,7 @@
   padding: var(--page-padding);
 }
 
-@media (max-width: 600px), (hover: none) {
+@media (max-width: 768px) {
   #head-banner {
     font-size: 20px;
   }
