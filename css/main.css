@@ -2,7 +2,18 @@
 @import 'aside.css';
 @import 'footer.css';
 @import 'info.css';
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import 'head-banner.css';
+@import 'slides.css';
+@import 'coming-soon.css';
+@import 'webkit-scrollbars.css';
+@import 'moz-scrollbars.css';
+@import 'account.css';
+@import url('https://fonts.googleapis.com/css2?family=Raleway');
+
+@font-face {
+  font-family: 'Quantum';
+  src: url('../fonts/Quantum.otf')
+}
 
 :root {
   --page-padding: 20px;
@@ -15,6 +26,16 @@ body {
   background-color: #222;
 }
 
+main {
+  margin-top: var(--header-height);
+}
+
+main.loaded {
+  background-image: url('../imgs/animation.gif');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 section {
   padding: var(--page-padding);
   margin-bottom: 100px;
@@ -22,18 +43,12 @@ section {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
 }
 
-section:last-child {
+section:last-of-type {
   margin: 0;
 }
 
-#page {
-  margin-top: var(--header-height);
-}
-
-#page.loaded {
-  background-image: url('../imgs/animation.gif');
-  background-size: cover;
-  background-attachment: fixed;
+section:last-child {
+  margin: 0;
 }
 
 .submenu {
@@ -50,8 +65,38 @@ section:last-child {
   transition: visibility 222ms, opacity 222ms;
 }
 
+p a {
+  color: inherit;
+  margin: 0;
+  transition: color 250ms;
+}
+
+p a:hover {
+  color: gray;
+}
+
+p a:active {
+  color: darkgray;
+}
+
 a.invisible {
   color: inherit;
   text-decoration: none;
+  margin: 0;
+}
+
+h1.title{
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+#divider {
+  text-shadow: 0 0 10px gray;
+  padding: 0;
+  padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, .4);
+  box-shadow: 0 0 1px gray;
   margin: 0;
 }

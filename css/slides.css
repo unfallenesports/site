@@ -1,0 +1,67 @@
+div.slides {
+  position: relative;
+}
+
+div.slides > div {
+  position: absolute;
+  width: 100%;
+  transition: opacity 750ms;
+}
+
+div.slides > div.selected {
+  opacity: 1;
+}
+
+div.slides > div:not(.selected) {
+  opacity: 0;
+}
+
+div.slides > button {
+  border: 0;
+  outline: 0;
+  position: absolute;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  bottom: 50%;
+  opacity: 0;
+  transform: translateY(50%);
+  font-size: 25px;
+  padding: 10px;
+  text-shadow: 0 0 5px black;
+  transition: background .5s, opacity 250ms;
+  cursor: pointer;
+}
+
+div.slides > button:hover {
+  background-color: rgba(0, 0, 0, .6);
+}
+
+div.slides > button:active {
+  background-color: rgba(0, 0, 0, .4);
+}
+
+div.slides:hover > button {
+  opacity: 1;
+}
+
+div.slides > button.left {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding-right: 14px;
+  left: 0;
+}
+
+div.slides > button.left::after {
+  content: '❮';
+}
+
+div.slides > button.right {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding-left: 14px;
+  right: 0;
+}
+
+div.slides > button.right::after {
+  content: '❯';
+}

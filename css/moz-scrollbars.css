@@ -1,0 +1,6 @@
+@supports (scrollbar-width: thin) and (scrollbar-color: #333 #111) {
+  :root {
+    scrollbar-width: thin;
+    scrollbar-color: #333 #111;
+  }
+}

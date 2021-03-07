@@ -1,16 +1,15 @@
-/* eslint-env browser */
+/* eslint-env browser, es6 */
 /* eslint-disable no-undef */
 
 // The navigation tree.
 var tree =
-{
+{  
   'HOME':
   {
     'Homepage': ['index.html', '_self'],
-    'Who are we': ['link', '_self'],
+    'Who we are': ['#who-we-are', '_self'],
     'Matches': ['link', '_self'],
     'Store': ['store.html', '_self'],
-    'Ciao': ['link', '_self']
   },
   
   'SOCIALS':
@@ -18,10 +17,13 @@ var tree =
     'Instagram': ['https://www.instagram.com/unfallen_esports/?hl=af', '_blank'],
     'Twitter': ['https://twitter.com/unfallenesports', '_blank'],
     'Youtube': ['https://www.youtube.com/channel/UCYtlayJBmU24KRAhaZR-2Yw', '_blank'],
+    'Twitch' : ['https://www.twitch.tv/unfallen_esports', '_blank'],
+    'Reddit' : ['https://www.reddit.com/user/unfallen_esports', '_blank'],
     'Faceit': ['https://www.faceit.com/pl/organizers/dc54c518-e8ef-40e9-8e75-caf3f05fcd0f/Unfallen%20esport/followers', '_blank'],
     'Discord':['https://discord.gg/gedVTHfnHV', '_blank'],
-    'Reddit':['https://www.reddit.com/user/unfallen_esports','_blank']
-  }
+  },
+  
+  'ACCOUNT': ['account.html', '_self']
 }
 
 // Get the navbar and its buttons
@@ -30,6 +32,10 @@ var navSpans = nav.getElementsByTagName('span');
 
 // Get the sidebar.
 var aside = document.getElementsByTagName('aside')[0];
+
+// 
+var logos = Array.from(document.getElementById('logos-container').getElementsByTagName('img'));
+var currentLogo = logos[0];
 
 // Parse the tree to HTML.
 for (var branch in tree)
@@ -41,31 +47,50 @@ for (var branch in tree)
   span.style.cursor = p.style.cursor = 'pointer';
   span.innerHTML = p.innerHTML = branch;
   div.className = 'submenu hidden';
-  for (var button in tree[branch])
+  if (Array.isArray(tree[branch]))
   {
-    var a = document.createElement('a');
-    a.innerHTML = button;
-    a.href = tree[branch][button][0];
-    a.target = tree[branch][button][1];
-    innerDiv.appendChild(a);
-    innerDiv.appendChild(document.createElement('br'));
+    span.onclick = p.onclick = function()
+    {
+      open(tree[branch][0], tree[branch][1]);
+    };
+  }
+  else
+  {
+    for (var button in tree[branch])
+    {
+      let buttonObj = tree[branch][button];
+      if (branch == 'SOCIALS')
+      {
+        currentLogo.onclick = function()
+        {
+          open(buttonObj[0], buttonObj[1]);
+        };
+        currentLogo = logos[logos.indexOf(currentLogo) + 1];
+      }
+      var a = document.createElement('a');
+      a.innerHTML = button;
+      a.href = buttonObj[0];
+      a.target = buttonObj[1];
+      innerDiv.appendChild(a);
+      innerDiv.appendChild(document.createElement('br'));
+    }
+    span.onclick = p.onclick = function()
+    {
+      var submenus = document.getElementsByClassName('submenu');
+      var submenu = window.event.target.getElementsByClassName('submenu')[0];
+      for (var i = 0; i < submenus.length; i++)
+      {
+        if (submenus[i] != submenu)
+          submenus[i].classList.add('hidden');
+      }
+      if (submenu.classList.contains('hidden'))
+          submenu.classList.remove('hidden');
+      else
+          submenu.classList.add('hidden');
+    };
   }
   div.appendChild(innerDiv);
   var divClone = div.cloneNode(true);
-  span.onclick = p.onclick = function()
-  {
-    var submenus = document.getElementsByClassName('submenu');
-    var submenu = window.event.target.getElementsByClassName('submenu')[0];
-    for (var i = 0; i < submenus.length; i++)
-    {
-      if (submenus[i] != submenu)
-        submenus[i].classList.add('hidden');
-    }
-    if (submenu.classList.contains('hidden'))
-        submenu.classList.remove('hidden');
-    else
-        submenu.classList.add('hidden');
-  };
   span.appendChild(div);
   p.appendChild(divClone);
   nav.appendChild(span);

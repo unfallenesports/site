@@ -1,15 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-.title{
-    text-align: center;
-    font-family: 'Raleway';
-    font-size: 40px;
+#who-we-are {
+  display: flow-root;
 }
 
-.section1{
-    font-size: 20px;
-    float: right;
+#who-we-are img {
+  float: left;
+  width: 25%;
 }
 
-.sect-logo{
+#who-we-are p {
+  float: right;
+  width: 75%;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #who-we-are .title {
+    margin-left: 0px;
+  }
+  
+  #who-we-are p {
+    margin-top: 0;
+    padding-left: 20px;
+  }
 }

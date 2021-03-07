@@ -5,7 +5,9 @@
 var scripts =
 [
   'navigation.js',
-  'preload.js'
+  'preload.js',
+  'slides.js',
+  'account.js'
 ]
 
 // Get the relative directory path of scripts.
@@ -31,7 +33,7 @@ for (var i = 0; i < scripts.length; i++)
   document.body.appendChild(script);
 }
 
-// Update #header-base size for teh first time.
+// Update #header-base size for the first time.
 updateHeaderBase();
 
 // Update #header-base size.

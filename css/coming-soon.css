@@ -1,0 +1,46 @@
+.coming-soon {
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 600px;
+  font-size: 76px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  text-shadow: 0 0 40px saddlebrown;
+}
+
+.coming-soon div:first-child {
+  width: 100%;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%) rotate(357deg);
+  opacity: 84%;
+}
+
+.coming-soon div:first-child::after {
+  content: 'Coming soon';
+}
+
+.coming-soon div:not(:first-child) {
+  height: 60px;
+  background: linear-gradient(#ffe9b0, #d6b256);
+}
+
+.coming-soon div:nth-child(2) {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.coming-soon div:last-child {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+@media (max-width: 768px) {
+  .coming-soon {
+    width: 90%;
+    font-size: 40px;
+  }
+}
