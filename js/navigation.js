@@ -3,7 +3,7 @@
 
 // The navigation tree.
 var tree =
-{  
+{
   'HOME':
   {
     'Homepage': ['index.html', '_self'],
