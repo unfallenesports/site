@@ -6,7 +6,8 @@ var scripts =
 [
   'navigation.js',
   'preload.js',
-  'slides.js'
+  'slides.js',
+  'account.js'
 ]
 
 // Get the relative directory path of scripts.
