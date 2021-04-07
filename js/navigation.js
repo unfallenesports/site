@@ -4,13 +4,15 @@
 // The navigation tree.
 var tree =
 {
-  'HOME':
+  'NEWS': ['#', '_self'],
+
+  'ESPORTS':
   {
-    'Homepage': ['index.html', '_self'],
-    'Who we are': ['#who-we-are', '_self'],
-    'Matches': ['link', '_self'],
-    'Store': ['store.html', '_self'],
+    'Valorant': ['#', '_self'],
+    'LoL': ['#', '_self']
   },
+
+  'SHOP': ['shop.html', '_self'],
   
   'SOCIALS':
   {
@@ -23,7 +25,7 @@ var tree =
     'Discord':['https://discord.gg/gedVTHfnHV', '_blank'],
   },
   
-  'ACCOUNT': ['account.html', '_self']
+  //'ACCOUNT': ['account.html', '_self']
 }
 
 // Get the navbar and its buttons
@@ -49,9 +51,10 @@ for (var branch in tree)
   div.className = 'submenu hidden';
   if (Array.isArray(tree[branch]))
   {
+    let b = tree[branch];
     span.onclick = p.onclick = function()
     {
-      open(tree[branch][0], tree[branch][1]);
+      open(b[0], b[1]);
     };
   }
   else
@@ -83,10 +86,7 @@ for (var branch in tree)
         if (submenus[i] != submenu)
           submenus[i].classList.add('hidden');
       }
-      if (submenu.classList.contains('hidden'))
-          submenu.classList.remove('hidden');
-      else
-          submenu.classList.add('hidden');
+      submenu.classList.toggle('hidden');
     };
   }
   div.appendChild(innerDiv);

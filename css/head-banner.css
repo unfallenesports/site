@@ -1,8 +1,17 @@
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #head-banner {
-  font-family: 'Quantum';
   text-align: center;
-  font-size: 55px;
-  text-shadow: 0 0 10px gray;
+  font-size: 2rem;
+  text-shadow: 0 0 10px black;
   padding: 0;
   padding-bottom: 5px;
   background-color: rgba(255, 255, 255, .4);
@@ -10,13 +19,43 @@
   margin: 0;
 }
 
-#head-banner div {
-  background: linear-gradient(to bottom right, #0c3f75, #660e1a);
-  padding: var(--page-padding);
+#head-banner div > div {
+  display: inline;
+  position: relative;
+}
+
+#head-banner img {
+  height: 10rem;
+  filter: brightness(999%) ;
+  opacity: 25%;
+  animation: spin 70s reverse infinite linear;
+}
+
+#head-banner img + img {
+  position: absolute;
+  filter: drop-shadow(0 0 .5rem #1A1A1A);
+  opacity: 100%;
+  animation: spin 40s infinite linear;
+  left: 0;
+}
+
+#head-banner > div {
+  background-image: url('../imgs/test-bg.png');
+  padding: calc(var(--page-padding) + 1em);
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 @media (max-width: 768px) {
   #head-banner {
-    font-size: 20px;
+    font-size: 1rem;
+  }
+
+  #head-banner img {
+    height: 7.5rem;
+  }
+
+  #head-banner > div {
+    padding: calc(var(--page-padding) + 1em);
   }
 }
