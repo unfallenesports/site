@@ -1,7 +1,7 @@
 @import 'header.css';
 @import 'aside.css';
 @import 'footer.css';
-@import 'info.css';
+@import 'video-frames.css';
 @import 'head-banner.css';
 @import 'slides.css';
 @import 'coming-soon.css';
@@ -90,6 +90,11 @@ h1.title{
   margin: 0;
   margin-bottom: 20px;
   margin-left: 20px;
+}
+
+iframe {
+  border-style: solid;
+  border-color: #333;
 }
 
 #divider {

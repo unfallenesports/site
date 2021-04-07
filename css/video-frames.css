@@ -1,0 +1,27 @@
+section#video-frames iframe {
+  display: inline-block;
+  width: calc(50% - var(--page-padding));
+  height: calc((50vw - var(--page-padding) * 1.5) / 16 * 9);
+}
+
+#twitch-frame {
+  margin-left: 0;
+  margin-right: calc(var(--page-padding) / 2);
+}
+
+#youtube-frame {
+  margin-right: 0;
+  margin-left: calc(var(--page-padding) / 2);
+}
+
+@media (max-width: 768px) {
+  section#video-frames iframe {
+    margin: 0;
+    width: 100%;
+    height: calc((100vw - var(--page-padding) * 2) / 16 * 9);
+  }
+
+  section#video-frames iframe + iframe {
+    margin-top: var(--page-padding);
+  }
+}
